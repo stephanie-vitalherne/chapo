@@ -7,3 +7,7 @@ get '/' do
   p 'Baana'
   erb :home
 end
+
+get '/signup' do
+  erb :signup
+end
