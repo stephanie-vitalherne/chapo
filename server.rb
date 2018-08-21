@@ -13,6 +13,7 @@ get '/' do
 end
 
 get '/signup' do
+  @page_title = 'chapo. - Sign Up'
   erb :signup
 end
 
@@ -47,6 +48,7 @@ post '/login' do
 end
 
 get '/account' do
+  @page_title = "chapo. - #{session[:user].username}"
   erb :account
 end
 

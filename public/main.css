@@ -4,6 +4,23 @@
 }
 /* ================================ */
 /* ==========LAYOUT================ */
+
+html{
+  background-color: #fe5850;
+}
+footer{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  color: #333;
+}
+
+footer li{
+  display: inline;
+  font-size: 0.6rem;
+}
+
 .navi{
   margin: 0;
   position: fixed;
@@ -16,18 +33,6 @@
 
 .navi li{
   margin: 1em;
-}
-
-footer{
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  bottom: 10%;
-}
-
-footer li{
-  display: inline;
-  font-size: 0.6rem;
 }
 /* ================================ */
 /* ===========HOME================= */
@@ -45,11 +50,16 @@ footer li{
   font-family: 'Syncopate', sans-serif;
   /* font-family: 'Six Caps', sans-serif; */
   font-size: 7em;
-  left: 2.5%;
+  left: 4.5%;
   top: 15%;
   max-width: 90%;
   z-index: -1;
   letter-spacing: 25px;
+  color: #333;
+}
+
+.letter{
+  letter-spacing: 12px;
 }
 
 #main-img{
@@ -60,15 +70,23 @@ footer li{
 sub{
   font-family: var(--second-font)
 }
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
   border: none;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #2f6f85;
+  text-align: center;
 }
 
-#login-menu{
+#login-menu, #signup-menu{
   position: absolute;
-  left: 38%;
-  border: 1px solid red;
+  left: 38.5%;
+  border: 3px solid #2f6f85;
   padding: 10% 5%;
+  box-shadow: 0 0 15px #000;
+  border-radius: 20px;
+  bottom: 25.4%;
+}
+
+#signup-menu{
+  bottom: 23.4% !important;
 }
 /* ================================ */
