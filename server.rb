@@ -6,6 +6,7 @@ set :database, 'sqlite3:rumblr.sqlite3'
 
 get '/' do
   p 'Baana'
+  @page_title = 'chapo. - The View from Above'
   @users = User.all
   p @users
   erb :home
@@ -28,6 +29,7 @@ post '/signup' do
 end
 
 get '/login' do
+  @page_title = 'chapo. - Log In'
   erb :login
 end
 
@@ -39,7 +41,7 @@ post '/login' do
     session[:user] = user
     redirect :account
   else
-    p 'Invalid credentials'
+    p "That's the wrong hat..."
     redirect '/'
   end
 end
@@ -53,5 +55,13 @@ get '/logout' do
   p 'user has logged out'
   redirect '/'
 end
+
+#
+# post '/deleteaccount' do
+#   User.find(session[:user].id).destroy
+#   p "USER #{session[:user].first_name} DELETED"
+#   session[:user] = nil
+#   redirect '/'
+# end
 
 require './models'
