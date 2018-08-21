@@ -1,3 +1,8 @@
+/* ==========VARIABLE============== */
+:root{
+  --second-font: 'Comfortaa', cursive;
+}
+/* ================================ */
 /* ==========LAYOUT================ */
 .navi{
   margin: 0;
@@ -6,16 +11,24 @@
   left: 40%;
   display: flex;
   list-style-type: none;
-  font-family: 'Comfortaa', cursive;
+  font-family: var(--second-font);
 }
 
 .navi li{
   margin: 1em;
 }
-/*
-.navi-login{
-  left: 35%;
-} */
+
+footer{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  bottom: 10%;
+}
+
+footer li{
+  display: inline;
+  font-size: 0.6rem;
+}
 /* ================================ */
 /* ===========HOME================= */
 .main{
@@ -44,6 +57,9 @@
 }
 /* ================================ */
 /* ===========LOGIN================ */
+sub{
+  font-family: var(--second-font)
+}
 input[type=text], input[type=password]{
   border: none;
   border-bottom: 2px solid red;
