@@ -23,7 +23,8 @@ post '/signup' do
     last_name: params['last_name'],
     username: params['username'],
     email: params['email'],
-    password: params['password']
+    password: params['password'],
+    birthday: params['birthday']
   )
   user.save
   redirect '/'

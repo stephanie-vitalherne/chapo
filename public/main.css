@@ -21,6 +21,10 @@ footer li{
   font-size: 0.6rem;
 }
 
+a{
+  color: #3dbcc7;
+}
+
 .navi{
   margin: 0;
   position: fixed;
@@ -62,18 +66,37 @@ footer li{
   letter-spacing: 12px;
 }
 
+.flash{
+  animation-name: flash;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash{
+  from {color: #000;}
+  to {color: #fff;}
+}
+
 #main-img{
   max-width: 50%;
 }
 /* ================================ */
-/* ===========LOGIN================ */
+/* ===========LOGIN/SIGNUP========= */
 sub{
   font-family: var(--second-font)
 }
 input[type=text], input[type=password], input[type=email]{
   border: none;
   border-bottom: 2px solid #2f6f85;
-  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+
+input[type=date]{
+  position: relative;
+  left: 13%;
 }
 
 #login-menu, #signup-menu{
@@ -84,9 +107,41 @@ input[type=text], input[type=password], input[type=email]{
   box-shadow: 0 0 15px #000;
   border-radius: 20px;
   bottom: 25.4%;
+  background-color: rgba(255,255,255,0.7);
 }
 
 #signup-menu{
   bottom: 23.4% !important;
+}
+
+#dog{
+  max-width: 100%;
+}
+
+#form-img{
+  max-width: 33%;
+  transform: rotateZ(55deg);
+  position: relative;
+  left: 45%;
+}
+
+.form-login{
+  font-family: 'Syncopate', sans-serif;
+  position: absolute;
+  left: 44%;
+  max-width: 11%;
+  top: 25%;
+  z-index: 1;
+  text-align: center;
+}
+
+.form-signup{
+  font-family: 'Syncopate', sans-serif !important;
+  position: absolute;
+  left: 44.3%;
+  max-width: 11%;
+  top: 16%;
+  z-index: 1;
+  text-align: center;
 }
 /* ================================ */
