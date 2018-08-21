@@ -1,0 +1,58 @@
+/* ==========LAYOUT================ */
+.navi{
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 40%;
+  display: flex;
+  list-style-type: none;
+  font-family: 'Comfortaa', cursive;
+}
+
+.navi li{
+  margin: 1em;
+}
+/*
+.navi-login{
+  left: 35%;
+} */
+/* ================================ */
+/* ===========HOME================= */
+.main{
+  /* display: none; */
+  position: absolute;
+  max-width: 50%;
+  left: 37%;
+  top: 22%;
+}
+
+.logo{
+  position: relative;
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Syncopate', sans-serif;
+  /* font-family: 'Six Caps', sans-serif; */
+  font-size: 7em;
+  left: 2.5%;
+  top: 15%;
+  max-width: 90%;
+  z-index: -1;
+  letter-spacing: 25px;
+}
+
+#main-img{
+  max-width: 50%;
+}
+/* ================================ */
+/* ===========LOGIN================ */
+input[type=text], input[type=password]{
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+#login-menu{
+  position: absolute;
+  left: 38%;
+  border: 1px solid red;
+  padding: 10% 5%;
+}
+/* ================================ */
