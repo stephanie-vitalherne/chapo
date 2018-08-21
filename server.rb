@@ -1,8 +1,10 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 enable :sessions
+require 'active_record' # needed to run heroku
 
-set :database, 'sqlite3:rumblr.sqlite3'
+# set :database, 'sqlite3:rumblr.sqlite3'
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']) # needed to run heroku
 
 get '/' do
   p 'Baana'
