@@ -3,7 +3,6 @@
   <p>
     <a href='/post'>Create A Post</a>
   </p>
-</div>
 
 <!-- ACCOUNT VERIFICATION -->
 <% if session[:user] == nil %>
@@ -13,6 +12,7 @@
       <%= session[:user].username %></p>
   <% end %>
   <!-- ======================== -->
+</div>
 
   <% @posts.reverse.first(20).each do |t| %>
     <div id='postAccount'>

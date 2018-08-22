@@ -4,10 +4,10 @@
 }
 /* ================================ */
 /* ==========LAYOUT================ */
-
 html{
   background-color: #fe5850;
 }
+
 footer{
   position: fixed;
   margin: 0;
@@ -27,12 +27,11 @@ a{
 
 .navi{
   margin: 0;
-  position: fixed;
   top: 0;
-  left: 35%;
-  display: flex;
   list-style-type: none;
   font-family: var(--second-font);
+  left: 35%;
+  max-width: 15%;
 }
 
 .navi li{
@@ -40,30 +39,17 @@ a{
 }
 /* ================================ */
 /* ===========HOME================= */
-.main{
-  /* display: none; */
-  position: absolute;
-  max-width: 50%;
-  left: 37%;
-  top: 22%;
-}
-
 .logo{
-  position: relative;
+  position: absolute;
   /* font-family: 'Comfortaa', cursive; */
   font-family: 'Syncopate', sans-serif;
   /* font-family: 'Six Caps', sans-serif; */
   font-size: 7em;
   left: 4.5%;
-  /* bottom: 15%; */
   max-width: 90%;
-  z-index: -1;
-  letter-spacing: 25px;
   color: #333;
-}
-
-.letter{
-  letter-spacing: 12px;
+  z-index: -1;
+  /* top: 50%; */
 }
 
 .flash{
@@ -79,10 +65,6 @@ a{
   from {color: #000;}
   to {color: #fff;}
 }
-/*
-#main-img{
-  max-width: 50%;
-} */
 /* ================================ */
 /* ===========LOGIN/SIGNUP========= */
 sub{
@@ -184,12 +166,13 @@ input[type=date]{
 }
 
 #accHead{
-  position: relative;
-  top: 4%;
+  position: absolute;
+  top: 5%;
   max-width: 16%;
+  left: 45%;
 }
 
-#accHead p , h1{
+#accHead p , #accHead h1{
   margin-bottom: 0;
   margin-top: 0;
 }
