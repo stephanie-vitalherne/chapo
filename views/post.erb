@@ -1,16 +1,18 @@
 <form action="/post" method="post">
   <h3>New Chapo</h3>
-  <input type="text" name="title" placeholder="Title" required>
+  <input type="text" name="title" placeholder="Title" required="required">
   <textarea name="content" placeholder='Some words' maxlength="50"></textarea>
-  <input type="text" name="image_url" placeholder="Let's see your chapo!" required>
+  <input type="text" name="image_url" placeholder="Let's see your chapo!" required="required">
   <input type="submit" value="Submit!">
 </form>
 
-
-<% @posts.each do |t| %>
-<div>
-  <h2><%= t.title %></h2>
-  <img src="<%= t.image_url %>">
-  <p><%= t.content %></p>
-</div>
+<% @posts.reverse.first(20).each do |t| %>
+  <div id="post">
+    <h2><%= t.title %></h2>
+    <hr>
+    <div>
+      <img src="<%= t.image_url %>" id='postImg' style='max-width: 70%;'>
+    </div>
+    <p><%= t.content %></p>
+  </div>
 <% end %>

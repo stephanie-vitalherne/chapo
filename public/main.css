@@ -9,7 +9,7 @@ html{
   background-color: #fe5850;
 }
 footer{
-  position: fixed;
+  position: sticky;
   margin: 0;
   padding: 0;
   bottom: 0;
@@ -143,5 +143,30 @@ input[type=date]{
   top: 16%;
   z-index: 1;
   text-align: center;
+}
+/* ================================ */
+/* ===============POST============= */
+#post{
+  z-index: -1;
+  position: relative;
+  left: 30%;
+  border: 3px solid black;
+  max-width: 30%;
+  margin-bottom: 3%;
+}
+
+#postAccount{
+  z-index: -1;
+  position: relative;
+  left: 35%;
+  border: 3px solid black;
+  max-width: 30%;
+  margin-bottom: 3%;
+}
+
+#postImg{
+  position: relative;
+  left: 12%;
+  top: 2%;
 }
 /* ================================ */

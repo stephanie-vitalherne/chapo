@@ -8,3 +8,13 @@
     <p>Welcome back, <%= session[:user].username %></p>
 <% end %>
 <!-- ======================== -->
+
+<% @posts.reverse.first(20).each do |t| %>
+<div id='postAccount'>
+  <h2><%= t.title %></h2>
+  <div>
+  <img src="<%= t.image_url %>" id="postImg" style="max-width: 70%">
+</div>
+  <p><%= t.content %></p>
+</div>
+<% end %>

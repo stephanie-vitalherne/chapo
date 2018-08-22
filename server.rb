@@ -39,7 +39,7 @@ post '/login' do
   user = User.find_by(email: email)
   if user.password == given_password
     session[:user] = user
-    redirect :account
+    redirect '/account'
   else
     p "That's the wrong hat..."
     redirect '/'
@@ -54,10 +54,13 @@ end
 
 get '/account' do
   @page_title = "chapo. - #{session[:user].username}"
+  @posts = User.find(session[:user].id).posts
+  p @posts
   erb :account
 end
 
 get '/post' do
+  @page_title = 'chapo. - Post'
   @posts = Post.all
   erb :post
 end
@@ -66,7 +69,10 @@ post '/post' do
   post = Post.new(
     title: params['title'],
     image_url: params['image_url'],
-    content: params['content']
+    content: params['content'],
+    user_id: session[:user].id,
+    username: session[:user].username,
+    post_date: Time.now
   )
   post.save
   redirect '/post'
