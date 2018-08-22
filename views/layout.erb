@@ -11,13 +11,13 @@
 <ul class="navi navi-login">
   <li><a href ="/">Home</li>
     <% if session[:user] == nil %>
-  <!-- <li><a href ="/signup">Sign Up</a></li> -->
+  <li><a href ="/signup">Sign Up</a></li>
   <li><a href ="/login">Log In</a></li>
-    <% else %>
-    <!-- <li><a href='/account'><%= session[:user].first_name  %></a></li> -->
+    <% elsif session[:user] != nil %>
+    <li><a href='/account'><%= session[:user].first_name  %></a></li>
     <li><a href='/logout'>Chapo ba!</a></li>
+  </ul>
       <% end %>
-</ul>
 
 <%= yield %>
 <footer>

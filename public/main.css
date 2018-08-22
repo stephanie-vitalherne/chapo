@@ -9,7 +9,7 @@ html{
   background-color: #fe5850;
 }
 footer{
-  position: sticky;
+  position: fixed;
   margin: 0;
   padding: 0;
   bottom: 0;
@@ -29,7 +29,7 @@ a{
   margin: 0;
   position: fixed;
   top: 0;
-  left: 40%;
+  left: 35%;
   display: flex;
   list-style-type: none;
   font-family: var(--second-font);
@@ -55,7 +55,7 @@ a{
   /* font-family: 'Six Caps', sans-serif; */
   font-size: 7em;
   left: 4.5%;
-  top: 15%;
+  /* bottom: 15%; */
   max-width: 90%;
   z-index: -1;
   letter-spacing: 25px;
@@ -79,10 +79,10 @@ a{
   from {color: #000;}
   to {color: #fff;}
 }
-
+/*
 #main-img{
   max-width: 50%;
-}
+} */
 /* ================================ */
 /* ===========LOGIN/SIGNUP========= */
 sub{
@@ -149,10 +149,22 @@ input[type=date]{
 #post{
   z-index: -1;
   position: relative;
-  left: 30%;
+  left: 34%;
   border: 3px solid black;
   max-width: 30%;
   margin-bottom: 3%;
+  box-shadow: 0 0 5px;
+}
+
+#postHead{
+  max-width: 10%;
+}
+
+#postForm{
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 30%;
+  max-width: 13%;
 }
 
 #postAccount{
@@ -162,11 +174,23 @@ input[type=date]{
   border: 3px solid black;
   max-width: 30%;
   margin-bottom: 3%;
+  box-shadow: 0 0 5px;
 }
 
 #postImg{
   position: relative;
   left: 12%;
   top: 2%;
+}
+
+#accHead{
+  position: relative;
+  top: 4%;
+  max-width: 16%;
+}
+
+#accHead p , h1{
+  margin-bottom: 0;
+  margin-top: 0;
 }
 /* ================================ */
