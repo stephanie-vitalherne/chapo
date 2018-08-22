@@ -1,0 +1,16 @@
+<form action="/post" method="post">
+  <h3>New Chapo</h3>
+  <input type="text" name="title" placeholder="Title" required>
+  <textarea name="content" placeholder='Some words' maxlength="50"></textarea>
+  <input type="text" name="image_url" placeholder="Let's see your chapo!" required>
+  <input type="submit" value="Submit!">
+</form>
+
+
+<% @posts.each do |t| %>
+<div>
+  <h2><%= t.title %></h2>
+  <img src="<%= t.image_url %>">
+  <p><%= t.content %></p>
+</div>
+<% end %>

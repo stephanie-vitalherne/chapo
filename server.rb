@@ -5,10 +5,8 @@ enable :sessions
 set :database, 'sqlite3:rumblr.sqlite3'
 
 get '/' do
-  p 'Baana'
   @page_title = 'chapo. - The View from Above'
   @users = User.all
-  p @users
   erb :home
 end
 
@@ -48,9 +46,30 @@ post '/login' do
   end
 end
 
+# get '/dashboard' do
+#   @page_title = 'chapo. - The Rack'
+#   @posts = Post.all
+#   erb :dashbaord
+# end
+
 get '/account' do
   @page_title = "chapo. - #{session[:user].username}"
   erb :account
+end
+
+get '/post' do
+  @posts = Post.all
+  erb :post
+end
+
+post '/post' do
+  post = Post.new(
+    title: params['title'],
+    image_url: params['image_url'],
+    content: params['content']
+  )
+  post.save
+  redirect '/post'
 end
 
 get '/logout' do
@@ -58,13 +77,5 @@ get '/logout' do
   p 'user has logged out'
   redirect '/'
 end
-
-#
-# post '/deleteaccount' do
-#   User.find(session[:user].id).destroy
-#   p "USER #{session[:user].first_name} DELETED"
-#   session[:user] = nil
-#   redirect '/'
-# end
 
 require './models'
