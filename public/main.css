@@ -138,15 +138,22 @@ input[type=date]{
   box-shadow: 0 0 5px;
 }
 
+#postInfo{
+  max-width: 70%;
+  position: relative;
+  left: 20%;
+  top: 4%;
+}
+
 #postHead{
-  max-width: 10%;
+  max-width: 12%;
 }
 
 #postForm{
   margin-bottom: 10px;
   position: relative;
   bottom: 30%;
-  max-width: 13%;
+  max-width: 64%;
 }
 
 #postAccount{
