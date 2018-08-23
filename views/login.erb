@@ -1,8 +1,21 @@
-<h1>Login</h1>
-    <p>New to our service? Click <a href='/signup'>here</a> to sign up</p>
-    <form action="/login" method="post">
-      <input type="text" name="email" placeholder="Email"> <br>
-      <input type="password" name="password" placeholder="Password"> <br>
+<h1 class='form-login'>Login</h1>
+<div id='dog'>
+  <img src="images/dog-hat.png" id="form-img">
+</div>
 
-      <input type="submit" value="Log In">
-</form>
+<div id='login-menu'>
+  <br>
+  <form action="/login" method="post">
+    <input type="text" name="email" placeholder="Email" required="required">
+    <br>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+
+    <sub>
+      <a href='/signup'>Sign Up</a>
+    </sub>
+    <br>
+    <br>
+    <input type="submit" value="Log In">
+  </form>
+</div>

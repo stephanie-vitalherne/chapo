@@ -1,11 +1,24 @@
-<h1>Sign Up</h1>
-<p>Already have an account Click <a href='/login'>here</a> to log in</p>
+<h1 class='form-signup'>Sign Up</h1>
+<div>
+  <img src="images/dog-hat.png" id="form-img">
+</div>
 
-<form action="/signup" method="post">
-  <input type="text" name="first_name" placeholder="First Name"> <br>
-  <input type="text" name="last_name" placeholder="Last Name"> <br>
-  <input type="email" name="email" placeholder="Email"> <br>
-  <input type="text" name="username" placeholder="Username"> <br>
-  <input type="password" name="password" placeholder="Create a Pasword"> <br>
-  <input type="submit" value="Sign Up">
-</form>
+
+<div id='signup-menu'>
+  <form action="/signup" method="post">
+    <input type="text" name="first_name" placeholder="First Name">
+    <br>
+    <input type="text" name="last_name" placeholder="Last Name">
+    <br>
+    <input type="email" name="email" placeholder="Email">
+    <br>
+    <input type="text" name="username" placeholder="Username">
+    <br>
+    <input type="password" name="password" placeholder="Create a Pasword">
+    <br>
+    <input type="date" name="birthday">
+    <br>
+    <sub><a href='/login'>chapo ready?</a></sub> <br> <br>
+    <input type="submit" value="Sign Up">
+  </form>
+</div>
