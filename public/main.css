@@ -103,8 +103,9 @@ input[type=date]{
 #form-img{
   max-width: 33%;
   transform: rotateZ(55deg);
-  position: relative;
-  left: 45%;
+  position: absolute;
+  left: 41%;
+  top: 5%;
 }
 
 .form-login{
