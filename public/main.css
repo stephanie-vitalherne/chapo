@@ -50,7 +50,7 @@ a{
   max-width: 90%;
   color: #333;
   z-index: -1;
-  /* top: 50%; */
+  bottom: 8%;
 }
 
 .flash{
