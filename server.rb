@@ -48,12 +48,6 @@ post '/login' do
   end
 end
 
-# get '/dashboard' do
-#   @page_title = 'chapo. - The Rack'
-#   @posts = Post.all
-#   erb :dashbaord
-# end
-
 get '/account' do
   @page_title = "chapo. - #{session[:user].username}"
   @posts = User.find(session[:user].id).posts
@@ -83,6 +77,17 @@ end
 get '/logout' do
   session[:user] = nil
   p 'user has logged out'
+  redirect '/'
+end
+
+get '/bye' do
+  erb :bye
+end
+
+post '/bye' do
+  User.find(session[:user].id).destroy
+  p "#{session[:user].username} has been deleted!"
+  session[:user] = nil
   redirect '/'
 end
 
